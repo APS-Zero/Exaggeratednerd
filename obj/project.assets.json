@@ -664,35 +664,31 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Epiphan\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Owen Thompson\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Epiphan\\Documents\\GitHub\\Exaggeratednerd\\Exaggeratednerd.csproj",
+      "projectUniqueName": "C:\\Users\\Owen Thompson\\Documents\\GitHub\\Exaggeratednerd\\Exaggeratednerd.csproj",
       "projectName": "Exaggeratednerd",
-      "projectPath": "C:\\Users\\Epiphan\\Documents\\GitHub\\Exaggeratednerd\\Exaggeratednerd.csproj",
-      "packagesPath": "C:\\Users\\Epiphan\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Epiphan\\Documents\\GitHub\\Exaggeratednerd\\obj\\",
+      "projectPath": "C:\\Users\\Owen Thompson\\Documents\\GitHub\\Exaggeratednerd\\Exaggeratednerd.csproj",
+      "packagesPath": "C:\\Users\\Owen Thompson\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Owen Thompson\\Documents\\GitHub\\Exaggeratednerd\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Epiphan\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Owen Thompson\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.myget.org/F/discord-net/api/v3/index.json": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.0": {
