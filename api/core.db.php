@@ -13,13 +13,13 @@ function sql_connect($dbname) {
 }
 
 function sql_create_db($dbname) {
-  $sql_query = "CREATE DATABASE IF NOT EXISTS ${dbname}";
+  $sql_query = "CREATE TABLE IF NOT EXISTS " . $dbname;
   $conn = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD);
   mysqli_query($conn, $sql_query);
 }
 
-function sql_create_table($dbname, $tablename) {
-  $sql_query = "CREATE TABLE IF NOT EXISTS ${tablename}";
+function sql_create_table($dbname, $tablename, $elements) {
+  $sql_query = "CREATE TABLE IF NOT EXISTS " . $tablename . "(" . $elements . ")";
   $conn = mysqli_connect($DB_HOST, $DB_USERNAME, $DB_PASSWORD, $dbname);
   mysqli_query($conn, $sql_query);
 }
