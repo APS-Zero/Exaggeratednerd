@@ -1,11 +1,12 @@
 Goals -
-
-
-
+1. Get a small userbase
+2. Be able to gain money from it
+3. Grow to a large userbase
 
 ToDo -
-
-
+1. Create the account system
+2. Create the profile system
+3. Create the
 
 
 -------------------------------------------------------------------------------------------------------------
