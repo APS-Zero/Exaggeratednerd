@@ -6,7 +6,9 @@ Goals -
 ToDo -
 1. Create the account system
 2. Create the profile system
-3. Create the
-
+3. Create the newsletter system
+4. Add some user roles
+5. Create the administrator panel
+6. Create the 
 
 -------------------------------------------------------------------------------------------------------------
