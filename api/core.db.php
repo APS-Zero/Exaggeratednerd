@@ -26,18 +26,18 @@ function sql_create_table($connection, $dbname, $tablename, $elements) {
   if ($cif) mysqli_close($connection);
 }
 
-function sql_make_query($connection, $query, $fname, $dbname) {
+function sql_make_query($connection, $query, $dbname) {
   $cif = false;
   if (!$connection) {
     $cif = true;
     $connection = sql_connect($dbname);
   }
   $result = mysqli_query($connection, $sql_query);
-  $fname($result);
   if ($cif) mysqli_close($connection);
+  return $result;
 }
 
-function sql_select($connection, $table, $fname, $where, $dbname) {
+function sql_select($connection, $table, $where, $dbname) {
   $sql_query = "SELECT * FROM " . $table;
   if ($where) $sql_query = $sql_query . " WHERE " . $where;
   $cif = false;
@@ -46,11 +46,11 @@ function sql_select($connection, $table, $fname, $where, $dbname) {
     $connection = sql_connect($dbname);
   }
   $result = mysqli_query($connection, $sql_query);
-  $fname($result);
   if ($cif) mysqli_close($connection);
+  return $result;
 }
 
-function sql_insert($connection, $table, $fname, $values, $dbname) {
+function sql_insert($connection, $table, $values, $dbname) {
   $sql_query = "INSERT INTO " . $table . " (";
   $start = true;
   foreach ($values as $name) {
@@ -67,8 +67,33 @@ function sql_insert($connection, $table, $fname, $values, $dbname) {
     $connection = sql_connect($dbname);
   }
   $result = mysqli_query($connection, $sql_query);
-  $fname($result);
   if ($cif) mysqli_close($connection);
+  return $result;
+}
+
+function sql_update($connection, $table, $id, $values, $dbname) {
+  $sql_query = "UPDATE " . $table . " SET ";
+  $start = true;
+  $_values = "(";
+  foreach ($values as $name) {
+    if ($start) {
+      $sql_query = $sql_query . $name;
+      $_values = $_values . $values[$name];
+      $start = false;
+      continue;
+    }
+    $sql_query = $sql_query . "," . $name;
+    $_values = $_values . "," . $values[$name];
+  }
+  $sql_query = $sql_query . ")" . $_values . ")";
+  $cif = false;
+  if (!$connection) {
+    $cif = true;
+    $connection = sql_connect($dbname);
+  }
+  $result = mysqli_query($connection, $sql_query);
+  if ($cif) mysqli_close($connection);
+  return $result;
 }
 
 ?>
